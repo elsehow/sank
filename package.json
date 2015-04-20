@@ -1,6 +1,6 @@
 {
   "name": "sank",
-  "version": "0.1.3",
+  "version": "0.1.8",
   "description": "two Bacon helper functions for syncing with a timeserver",
   "main": "sank.js",
   "scripts": {

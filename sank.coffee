@@ -40,5 +40,6 @@ getSynchronisedTimeProperty = (timeDiffStream, pollLocalClockInterval) ->
 	synchronisedTimeProperty
 		.filter((v) -> if v then v)
 
-exports.getTimeDiffStream = getTimeDiffStream
-exports.getSynchronisedTimeProperty = getSynchronisedTimeProperty 
+module.exports = 
+	getTimeDiffStream: getTimeDiffStream
+	getSynchronisedTimeProperty: getSynchronisedTimeProperty

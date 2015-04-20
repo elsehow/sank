@@ -48,8 +48,9 @@
     });
   };
 
-  exports.getTimeDiffStream = getTimeDiffStream;
-
-  exports.getSynchronisedTimeProperty = getSynchronisedTimeProperty;
+  module.exports = {
+    getTimeDiffStream: getTimeDiffStream,
+    getSynchronisedTimeProperty: getSynchronisedTimeProperty
+  };
 
 }).call(this);
