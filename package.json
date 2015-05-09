@@ -1,6 +1,6 @@
 {
   "name": "sank",
-  "version": "0.1.8",
+  "version": "0.2.1",
   "description": "two Bacon helper functions for syncing with a timeserver",
   "main": "sank.js",
   "scripts": {
@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/elsehow/sank",
   "dependencies": {
+    "bacon.jquery.ajax": "0.0.1",
     "baconjs": "^0.7.53",
+    "jquery": "^2.1.4",
     "moment": "^2.10.2"
   }
 }

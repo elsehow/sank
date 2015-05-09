@@ -1,19 +1,10 @@
 # sank
 
-two Bacon.js helper functions for syncing a browser's local time with a timeserver
+A function for syncing with a timeserver using a Bacon property.
 
-### sank.getTimeDiffStream (timeServerURL, updateTimeInterval)
+Only tested in the browser so far. Requires `$` to be bound to jquery.
 
-this function requests the time from timeServerURL on the specified interval and **returns a Bacon stream of differences (in ms)** between local time and server time.
+### sank (timeServerURL, updateTimeInterval)
+Returns a Bacon property representing the time diff (in ms) between client time and the timeserver. the property requests sends a request to timeServerURL every updateTimeInterval
 
-(NB. it expects the timeServerURL to return nothing but a date on GET request)
-
-### sank.getSynchronisedTimeProperty (timeDiffStream, pollLocalClockInterval)
-
-this function returns a Bacon property representing the user's local time, synchronised to the timeserver's time
-
-it takes a timeDiffStream (which can be produced using the other function in this package), and an interval at which it should poll the user's internal clock.
-
-**returns the synchronised time property** that updates on pollLocalClockInterval.
-
-
+`timeServerURL` must return an ISO-formatted date on a GET request.
